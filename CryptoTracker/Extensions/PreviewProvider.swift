@@ -14,8 +14,6 @@ extension PreviewProvider {
     static var dev: DeveloperPreview {
         return DeveloperPreview.instance
     }
-    
-    
 }
 
 
@@ -25,6 +23,14 @@ class DeveloperPreview {
     private init() { }
     
     let homeVM = HomeViewModel()
+    
+    let state1 = StatisticModel(title: "Market Cap", value: "$12.58Bn", percentageChange: 25.35)
+    let state2 = StatisticModel(title: "Total Volume", value: "$2.343Tr")
+    let state3 = StatisticModel(
+        title: "Portfolio Value",
+        value: "$50.4k",
+        percentageChange: -12.34
+    )
         
     
     let coin = CoinModel(
