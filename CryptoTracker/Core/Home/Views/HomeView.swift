@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject private var vm: HomeViewModel
-    @State private var showPortfolio: Bool = false // animate right
+    @State private var showPortfolio: Bool = true // animate right
     @State private var showPortfolioView: Bool = false // new sheet
     
     var body: some View {
@@ -19,7 +19,7 @@ struct HomeView: View {
             Color.theme.background
                 .ignoresSafeArea()
                 .sheet(isPresented: $showPortfolioView, content: {
-                    PortfolioView()
+                    PortfolioView(isPresented:$showPortfolioView)
                         .presentationDragIndicator(.visible)
                         .environmentObject(vm)
                 })
