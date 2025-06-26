@@ -26,7 +26,7 @@ struct StatisticView: View {
                         Angle(degrees: (stat.percentageChange ?? 0) >= 0 ? 0 : 180)
                     )
 
-                Text(stat.percentageChange?.asNumberString() ?? "")
+                Text((stat.percentageChange?.asNumberString() ?? "") + "%")
                     .font(.caption)
                     .bold()
             }
