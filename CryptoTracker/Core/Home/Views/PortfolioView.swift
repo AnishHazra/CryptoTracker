@@ -175,6 +175,8 @@ extension PortfolioView {
 
         // close the sheet
         isPresented = false
+        
+        removeSelectedCoin()
     }
 
     private func removeSelectedCoin() {
